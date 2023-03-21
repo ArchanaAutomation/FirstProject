@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="TC Grouping">
+  <parameter name="session_key" value="9952509843"></parameter>
+  <parameter name="session_password" value="Archana0897"></parameter>
+    <classes>
+      <class name="TestNgFramework.Parameterization"/>
+    </classes>
+  </test> <!-- TC Grouping -->
+</suite> <!-- Suite -->

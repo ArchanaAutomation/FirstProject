@@ -1,0 +1,32 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class sctc {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\\\chromedriver\\\\chromedriver_win32\\\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+		driver.get("https://www.tnstc.in/TNSTCOnline/validateUser.do");
+
+		
+
+		// String date="9";
+		// String month="Dec";
+		// String year="2022";
+
+		WebElement Startdate = driver.findElement(By.xpath("//*[@id=\"txtdeptDateOtrip\"]"));
+		Startdate.sendKeys("09 dec 2022");
+
+		WebElement Date = driver.findElement(By.className("ui-state-default"));
+		Date.sendKeys("9");
+
+		WebElement Month = driver.findElement(By.className("ui-datepicker-month"));
+		Month.click();
+
+	}
+
+}
